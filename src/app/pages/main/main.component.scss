@@ -1,0 +1,89 @@
+
+.title {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    font-size: 33px;
+    font-family: system-ui;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.filter-add {
+    display: flex;
+    align-items: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+}
+
+.filter {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.table-container{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    overflow: auto;
+}
+
+.filter-btn{
+    width: 100%;
+}
+
+
+@media (min-width: 720px) {
+
+.title {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    font-size: 33px;
+    font-family: system-ui;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.filter {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    flex-direction: row;
+}
+
+.filter-add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.table-container{
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+button.btn.btn-success.round {
+    border-radius: 25px;
+}
+
+.selected-role{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 0.4rem;
+    border: 1px solid green;
+}
+
+.title-role {
+    white-space: nowrap;
+}
+}

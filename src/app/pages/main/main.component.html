@@ -1,0 +1,39 @@
+<div class="title">
+    <label>Gestion de clientes</label>
+</div>
+<div class="filter-add">
+    <div class="filter">
+        <label class="title-role">Filtrar por rol</label>
+        <mat-select class="selected-role" [(ngModel)]="selectedClientType" (ngModelChange)="filterByRole()">
+            <mat-option selected [value]="defaultSelected">Todos*</mat-option>
+            <mat-option *ngFor="let clientType of listClientType" [value]="clientType">{{clientType.name}}</mat-option>
+        </mat-select>
+    </div>
+    <div class="add">
+        <button type="button" class="btn btn-success round" (click)="createClient()">+</button>
+    </div>
+</div>
+<div class="table-container">
+    <table class="table table-hover">
+        <thead>
+            <th scope="col">ID</th>
+            <th scope="col">Nombres</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Fecha de nacimiento</th>
+            <th scope="col">Rol de cliente</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let client of listClients">
+                <td scope="row">{{client.id}}</td>
+                <td scope="col">{{client.firstName}}</td>
+                <td scope="col">{{client.lastName}}</td>
+                <td scope="col">{{client.birthDate}}</td>
+                <td scope="col">{{client.clientType?.name}}</td>
+                <td scope="col"><button type="button" class="btn btn-warning"  (click)="updateClient(client)">Actualizar</button></td>
+                <td scope="col"><button type="button" class="btn btn-danger" (click)="deleteClient(client.id)">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
